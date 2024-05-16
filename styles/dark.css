@@ -1,0 +1,26 @@
+.dark {
+  background-color: #141d2f;
+  color: #fff;
+}
+
+.dark header button:hover {
+  color: #90a4d4;
+}
+
+.dark header button:hover #other-scheme-icon path {
+  fill: #90a4d4;
+}
+
+.dark search,
+.dark main {
+  background-color: #1e2a47;
+}
+
+.dark input,
+.dark input::placeholder {
+  color: inherit;
+}
+
+.dark #stats {
+  background-color: #141d2f;
+}

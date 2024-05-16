@@ -1,0 +1,93 @@
+#scheme {
+  font-size: 0.81rem;
+  padding: 1.94rem 1.5rem 4.94rem;
+}
+
+search {
+  height: 3.75rem;
+  margin-bottom: 1rem;
+}
+
+form {
+  padding-inline: 1rem 0.44rem;
+}
+
+search img {
+  margin-right: 0.56rem;
+}
+
+input {
+  width: 11.5rem;
+}
+
+search button {
+  font-size: 0.87rem;
+  height: 2.87rem;
+  width: 5.25rem;
+}
+
+main {
+  column-gap: 1.19rem;
+  grid-template-areas:
+    "avatar  name   "
+    "avatar  joined "
+    "details details";
+  grid-template-columns: 4.37rem 1fr;
+  grid-template-rows: 3.12rem 1.19rem 1fr;
+  padding: 2rem 1.5rem 3rem;
+}
+
+#name {
+  margin-top: 0.06rem;
+}
+
+h1 {
+  font-size: 1rem;
+}
+
+#details {
+  margin-top: 2.06rem;
+}
+
+#details p {
+  line-height: 192.3%;
+  margin-bottom: 1.44rem;
+}
+
+#stats {
+  grid-template-rows: 1rem 1fr;
+  justify-items: center;
+  margin-bottom: 1.5rem;
+  padding: 1.12rem 0.88rem 1.19rem 0.94rem;
+  row-gap: 0.5rem;
+}
+
+.stats-title {
+  font-size: 0.69rem;
+}
+
+.stats-data {
+  font-size: 1rem;
+}
+
+#other-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#other-details li {
+  height: 1.25rem;
+}
+
+.website {
+  order: 1;
+}
+
+.twitter {
+  order: 2;
+}
+
+.company {
+  order: 3;
+}

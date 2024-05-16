@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+}
+
+#scheme {
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  font-weight: 700;
+  justify-content: space-between;
+  margin-bottom: 2.25rem;
+}
+
+#logo {
+  font-size: 1.62rem;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+header button {
+  align-items: center;
+  background-color: transparent;
+  color: inherit;
+  display: flex;
+  gap: 1rem;
+}
+
+#other-scheme-name {
+  text-transform: uppercase;
+}
+
+svg {
+  display: block;
+}
+
+search,
+main {
+  border-radius: 15px;
+}
+
+form {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  caret-color: #0079ff;
+  font: inherit;
+  margin-right: auto;
+  outline: none;
+}
+
+search button {
+  background-color: #0079ff;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  position: relative;
+}
+
+search button::before {
+  color: #f74646;
+  font-size: 0.94rem;
+  left: -7.25rem;
+  position: absolute;
+}
+
+.error::before {
+  content: "No results";
+}
+
+search button:hover {
+  background-color: #60abff;
+}
+
+main {
+  display: grid;
+}
+
+#avatar {
+  border-radius: 50%;
+  grid-area: avatar;
+  width: 100%;
+}
+
+#name {
+  grid-area: name;
+}
+
+#user-name {
+  color: #0079ff;
+}
+
+#joined {
+  grid-area: joined;
+}
+
+#details {
+  grid-area: details;
+}
+
+.no-bio {
+  opacity: 0.75;
+}
+
+ul {
+  list-style: none;
+}
+
+#stats {
+  border-radius: 10px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 5.31rem;
+}
+
+#stats li {
+  display: contents;
+}
+
+.stats-data {
+  font-weight: 700;
+}
+
+#other-details li {
+  align-items: center;
+  display: flex;
+}
+
+#other-details img {
+  object-fit: none;
+  object-position: left;
+  width: 2.06rem;
+}
+
+.not-available img,
+.not-available a {
+  opacity: 0.5;
+}

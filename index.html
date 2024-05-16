@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub User Search App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles/general.css" rel="stylesheet" />
+    <link href="styles/mobile.css" rel="stylesheet" />
+    <link href="styles/tablet.css" rel="stylesheet" />
+    <link href="styles/desktop.css" rel="stylesheet" />
+    <link href="styles/light.css" rel="stylesheet" />
+    <link href="styles/dark.css" rel="stylesheet" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer src="scripts/util.js"></script>
+    <script defer src="scripts/app.js"></script>
+  </head>
+  <body id="github-app">
+    <div id="scheme" v-bind:class="scheme">
+      <header>
+        <span id="logo">devfinder</span>
+        <button @click="toggleScheme">
+          <span id="other-scheme-name">{{ getOtherScheme().scheme }}</span>
+          <div
+            id="other-scheme-icon"
+            v-html="this[`${getOtherScheme().iconSvg}`]"
+          ></div>
+        </button>
+      </header>
+      <search>
+        <form @submit="searchUser">
+          <img alt="Search Icon" src="assets/images/icon-search.svg" />
+          <input
+            placeholder="Search GitHub username…"
+            required
+            type="text"
+            v-model="userName"
+          />
+          <button v-bind:class="error">Search</button>
+        </form>
+      </search>
+      <main>
+        <img alt="Avatar" id="avatar" v-bind:src="userData.avatar_url" />
+        <div id="name">
+          <h1>{{ userData.name }}</h1>
+          <span id="user-name">@{{ userData.login }}</span>
+        </div>
+        <span id="joined">{{ userData.joinedAt }}</span>
+        <div id="details">
+          <p v-bind:class="getNoBioClass()">{{ userData.bio }}</p>
+          <ul id="stats">
+            <li>
+              <span class="stats-title">Repos</span>
+              <span class="stats-data">{{ userData.public_repos }}</span>
+            </li>
+            <li>
+              <span class="stats-title">Followers</span>
+              <span class="stats-data">{{ userData.followers }}</span>
+            </li>
+            <li>
+              <span class="stats-title">Following</span>
+              <span class="stats-data">{{ userData.following }}</span>
+            </li>
+          </ul>
+          <ul id="other-details">
+            <li
+              v-for="detail in details"
+              v-bind:class="`${detail.fieldName} ${getNotAvailableClass(detail)}`"
+            >
+              <img
+                v-bind:alt="detail.fieldName"
+                v-bind:src="getDetailsImgSrc(detail)"
+              />
+              <a v-bind:href="getDetailsHref(detail)"
+                >{{ getDetails(detail) }}</a
+              >
+            </li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

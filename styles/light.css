@@ -1,0 +1,46 @@
+.light {
+  background-color: #f6f8ff;
+  color: #4b6a9b;
+}
+
+.light #logo {
+  color: #222731;
+}
+
+.light header button:hover {
+  color: #222731;
+}
+
+.light header button:hover #other-scheme-icon path {
+  fill: #222731;
+}
+
+.light search,
+.light main {
+  background-color: #fefefe;
+  box-shadow: 0px 16px 30px -10px #4660bb33;
+}
+
+.light input {
+  color: #222731;
+}
+
+.light input::placeholder {
+  color: #4b6a9b;
+}
+
+.light h1 {
+  color: #2b3442;
+}
+
+.light #joined {
+  color: #697c9a;
+}
+
+.light #stats {
+  background-color: #f6f8ff;
+}
+
+.light .stats-data {
+  color: #2b3442;
+}
